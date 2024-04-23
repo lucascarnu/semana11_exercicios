@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "87cadf75-e658-49db-96b5-7eeb4d42c92a",
+		"name": "semana11-ex-semanal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33277065"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "cadastro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeUsuario\": \"novousuario1\",\r\n  \"senha\": \"senha123\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/cadastros",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"cadastros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeUsuario\": \"novousuario1\",\r\n  \"senha\": \"senha123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4MzY0NTEsImlhdCI6MTcxMzgwMDQ1MSwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.ndAWtzLBZkPpuaky21PLPAHwSF4NWQd52T2BxZMEZm6EF6qsMj7_rXEIblyOScSi91-J-xmKZQooaNno9jN3kk3_j-pYq8gvtmDi3HCu7Qe4fpDLPOW8mBw9NZR0JSeE8OGVXSiel4MoVSiCbbSvSEsiJ0U3lZcoOLEE3MGm_bEoVuZ_f95OIHB1chMJ9PNR4rEiWBlCati38hMOLHSCmf8dLzLRkIAmveakEC1Qk9AW0rLq8ST1WYiSm1NNj2wVI9yL2UyZwwpsIrOIsyOpCAXO3IFEEazeqW1UKoFN3CVX8tfMY2N1sdNoBP3a-GHM-yVXeofGGJzs1U3l7jLDsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/cadastros",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"cadastros"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cadernos",
+			"item": [
+				{
+					"name": "criar caderno",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4NDEyOTEsImlhdCI6MTcxMzgwNTI5MSwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.cC_RTyEUc4roW8MS_h5Ok_pTLte01g75o8k7jUsBkOgoT_sH3UT1uXgA-ImDaM3duB4f5M2CtFf69E5XU-nPIn8yB4Lq3SwNC802MCrI9PLo16HNwYxesUZE11-2GRyGTHoBdi_TEKFadiELqCySV9XwK9ZHLh8Q1SaYMna1B7aNgNtAY-3fmIcPAWYacCXK-mvItMAI-xeYLifYcFv13t7BKpd6ubTChXFGtPgf_W_TztR5QiD5-UBVXpXkz2tw2wvH4sGrxqwOwR2UV3JNyV5szwWjGucdejpnH4vmcATF9DkyG23JSrX8rlLP0H9MWZaQjMKEms5LO-eWTA9lPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Caderno 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cadernos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cadernos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4NDEyOTEsImlhdCI6MTcxMzgwNTI5MSwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.cC_RTyEUc4roW8MS_h5Ok_pTLte01g75o8k7jUsBkOgoT_sH3UT1uXgA-ImDaM3duB4f5M2CtFf69E5XU-nPIn8yB4Lq3SwNC802MCrI9PLo16HNwYxesUZE11-2GRyGTHoBdi_TEKFadiELqCySV9XwK9ZHLh8Q1SaYMna1B7aNgNtAY-3fmIcPAWYacCXK-mvItMAI-xeYLifYcFv13t7BKpd6ubTChXFGtPgf_W_TztR5QiD5-UBVXpXkz2tw2wvH4sGrxqwOwR2UV3JNyV5szwWjGucdejpnH4vmcATF9DkyG23JSrX8rlLP0H9MWZaQjMKEms5LO-eWTA9lPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Caderno 20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cadernos/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cadernos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4MzcyMDIsImlhdCI6MTcxMzgwMTIwMiwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.vRjF8UPQh4lhy3incnD0OEUjNutTxbicIo1COcA6A2nN5O4b1lCrLeXcNT1o0u6O7D6mHYekfFd8Hbcda8P292f1xmVbZzVRqkvoC6PZoz7FAGQiqFXXcf1B2VXm23FekSA-TkhJ48Ijl7zc2Jn1CWZL3i5-RW-G6BuVYl9vwAwk4TEzfAxBKtTAd-ii5MI_R64NnbMIJPq68GLaktPK-uV5sad0TYdun35ZDBs0nhoJ_Fkp56IZ1HusvzTF_Wws3ATl4lvMpiLT1c92C8-VEzPHYwVySrtfa0ihpIiU63YguM1L8CDtLz96qkojXrY_yNYeejFGkOmlLKrWfoud8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/cadernos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cadernos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4MzcyMDIsImlhdCI6MTcxMzgwMTIwMiwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.vRjF8UPQh4lhy3incnD0OEUjNutTxbicIo1COcA6A2nN5O4b1lCrLeXcNT1o0u6O7D6mHYekfFd8Hbcda8P292f1xmVbZzVRqkvoC6PZoz7FAGQiqFXXcf1B2VXm23FekSA-TkhJ48Ijl7zc2Jn1CWZL3i5-RW-G6BuVYl9vwAwk4TEzfAxBKtTAd-ii5MI_R64NnbMIJPq68GLaktPK-uV5sad0TYdun35ZDBs0nhoJ_Fkp56IZ1HusvzTF_Wws3ATl4lvMpiLT1c92C8-VEzPHYwVySrtfa0ihpIiU63YguM1L8CDtLz96qkojXrY_yNYeejFGkOmlLKrWfoud8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/cadernos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cadernos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjIiLCJleHAiOjE3MTM4NjU5NzksImlhdCI6MTcxMzgyOTk3OSwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzIifQ.YvvKAyy2kpU4p7ifxb3s09fcOAdwpj34aaft7YyD-k3nKSknlDUymQaHM87REx0-SSQUoGGtyHaXPRPFgT1sRUSS1g8OnQS9RBp8D7jpEB-kXyrZ3uv4arvQZ_NcDlbPU3JSOrGbgedB985fHEChrPjBisHyYQcJx2tWXbj4XAisK3KXkz7oUpPwqPdx51gfLr_0-yQ_n538vObxxE1U6UcFLKKWOjtqGBBykgx6fy0bH-7lMjXdIO5DHtSI6eSPS3SbOo8F43zl-29GoufvFMwvTzvZHaQLSOPEeTDBCRZjP70Z8f92uwHNmZqEHgxj-_sFDk-ZaZazRplV10IPLw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/cadernos/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cadernos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notas",
+			"item": [
+				{
+					"name": "criar nota",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4MzcyMDIsImlhdCI6MTcxMzgwMTIwMiwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.vRjF8UPQh4lhy3incnD0OEUjNutTxbicIo1COcA6A2nN5O4b1lCrLeXcNT1o0u6O7D6mHYekfFd8Hbcda8P292f1xmVbZzVRqkvoC6PZoz7FAGQiqFXXcf1B2VXm23FekSA-TkhJ48Ijl7zc2Jn1CWZL3i5-RW-G6BuVYl9vwAwk4TEzfAxBKtTAd-ii5MI_R64NnbMIJPq68GLaktPK-uV5sad0TYdun35ZDBs0nhoJ_Fkp56IZ1HusvzTF_Wws3ATl4lvMpiLT1c92C8-VEzPHYwVySrtfa0ihpIiU63YguM1L8CDtLz96qkojXrY_yNYeejFGkOmlLKrWfoud8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Nota 1\",\r\n  \"conteudo\": \"Conteúdo da Nota 1\",\r\n  \"caderno\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/notas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"notas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4MzcyMDIsImlhdCI6MTcxMzgwMTIwMiwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.vRjF8UPQh4lhy3incnD0OEUjNutTxbicIo1COcA6A2nN5O4b1lCrLeXcNT1o0u6O7D6mHYekfFd8Hbcda8P292f1xmVbZzVRqkvoC6PZoz7FAGQiqFXXcf1B2VXm23FekSA-TkhJ48Ijl7zc2Jn1CWZL3i5-RW-G6BuVYl9vwAwk4TEzfAxBKtTAd-ii5MI_R64NnbMIJPq68GLaktPK-uV5sad0TYdun35ZDBs0nhoJ_Fkp56IZ1HusvzTF_Wws3ATl4lvMpiLT1c92C8-VEzPHYwVySrtfa0ihpIiU63YguM1L8CDtLz96qkojXrY_yNYeejFGkOmlLKrWfoud8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/notas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"notas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4MzcyMDIsImlhdCI6MTcxMzgwMTIwMiwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.vRjF8UPQh4lhy3incnD0OEUjNutTxbicIo1COcA6A2nN5O4b1lCrLeXcNT1o0u6O7D6mHYekfFd8Hbcda8P292f1xmVbZzVRqkvoC6PZoz7FAGQiqFXXcf1B2VXm23FekSA-TkhJ48Ijl7zc2Jn1CWZL3i5-RW-G6BuVYl9vwAwk4TEzfAxBKtTAd-ii5MI_R64NnbMIJPq68GLaktPK-uV5sad0TYdun35ZDBs0nhoJ_Fkp56IZ1HusvzTF_Wws3ATl4lvMpiLT1c92C8-VEzPHYwVySrtfa0ihpIiU63YguM1L8CDtLz96qkojXrY_yNYeejFGkOmlLKrWfoud8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/notas/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"notas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4MzcyMDIsImlhdCI6MTcxMzgwMTIwMiwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.vRjF8UPQh4lhy3incnD0OEUjNutTxbicIo1COcA6A2nN5O4b1lCrLeXcNT1o0u6O7D6mHYekfFd8Hbcda8P292f1xmVbZzVRqkvoC6PZoz7FAGQiqFXXcf1B2VXm23FekSA-TkhJ48Ijl7zc2Jn1CWZL3i5-RW-G6BuVYl9vwAwk4TEzfAxBKtTAd-ii5MI_R64NnbMIJPq68GLaktPK-uV5sad0TYdun35ZDBs0nhoJ_Fkp56IZ1HusvzTF_Wws3ATl4lvMpiLT1c92C8-VEzPHYwVySrtfa0ihpIiU63YguM1L8CDtLz96qkojXrY_yNYeejFGkOmlLKrWfoud8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Nota 1\",\r\n  \"conteudo\": \"Conteúdo da Nota 1 alterada 1\",\r\n  \"caderno\": {\r\n    \"id\": 1\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/notas/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"notas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcGxpY2FjYW9zZWN1cml0eSIsInN1YiI6IjEiLCJleHAiOjE3MTM4MzcyMDIsImlhdCI6MTcxMzgwMTIwMiwidXNlcm5hbWUiOiJub3ZvdXN1YXJpbzEifQ.vRjF8UPQh4lhy3incnD0OEUjNutTxbicIo1COcA6A2nN5O4b1lCrLeXcNT1o0u6O7D6mHYekfFd8Hbcda8P292f1xmVbZzVRqkvoC6PZoz7FAGQiqFXXcf1B2VXm23FekSA-TkhJ48Ijl7zc2Jn1CWZL3i5-RW-G6BuVYl9vwAwk4TEzfAxBKtTAd-ii5MI_R64NnbMIJPq68GLaktPK-uV5sad0TYdun35ZDBs0nhoJ_Fkp56IZ1HusvzTF_Wws3ATl4lvMpiLT1c92C8-VEzPHYwVySrtfa0ihpIiU63YguM1L8CDtLz96qkojXrY_yNYeejFGkOmlLKrWfoud8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/notas/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"notas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
